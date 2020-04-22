@@ -21,14 +21,6 @@ pipeline {
                 sh 'npm install'
                 echo 'NPM Install completed'
 
-                sh 'npm build'
-                echo 'Build completed'
-
-                sh 'npm lint'
-                echo 'Lint completed'
-                sh 'npm test'
-                echo 'Test completed'
-               
                 
             }
         }

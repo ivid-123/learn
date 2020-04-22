@@ -15,6 +15,18 @@ pipeline {
                 sleep 10 // seconds
                 sh 'node --version'
                 sh 'npm --version'
+                sh 'npm install @angular/cli@7.3.9'
+                echo 'Install completed'
+                sh 'npm install'
+                echo 'NPM Install completed'
+
+                sh 'npm build'
+                echo 'Build completed'
+
+                sh 'npm lint'
+                echo 'Lint completed'
+                sh 'npm test'
+                echo 'Test completed'
                
                 
             }

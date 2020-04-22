@@ -2,6 +2,7 @@ pipeline {
     agent {
          node { 
              label 'nodejs' 
+
          }
     } 
 
@@ -15,8 +16,7 @@ pipeline {
                 sh 'node --version'
                 sh 'npm --version'
                 echo 'ng verion'
-                sh 'ng --version'
-                sh 'npm install @angular/cli@7.3.9'
+                sh 'sudo npm install @angular/cli@7.3.9'
                 echo 'Install completed'
                 sh 'npm install'
                 echo 'NPM Install completed'

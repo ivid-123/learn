@@ -1,13 +1,6 @@
-FROM node:10
+FROM jenkins/jenkins
 
-WORKDIR /usr/src/app
-
-ARG NODE_ENV
-ENV NODE_ENV $NODE_ENV
-
-COPY . /usr/src/app
-RUN npm install
-RUN npm run build
-
-EXPOSE 8080
-CMD [ "npm", "start" ]
+RUN apt-get install -y curl \
+  && curl -sL https://deb.nodesource.com/setup_9.x | bash - \
+  && apt-get install -y nodejs \
+  && curl -L https://www.npmjs.com/install.sh | sh

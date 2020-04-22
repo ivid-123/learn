@@ -8,6 +8,8 @@ pipeline {
                 echo 'Waiting 5 minutes for deployment to complete prior starting smoke testing'
                 echo 'New pull request changes'
                 sleep 30 // seconds
+                node --version
+                
             }
         }
         stage('Test') {

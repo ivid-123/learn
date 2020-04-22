@@ -1,7 +1,7 @@
 pipeline {
     agent {
          node { 
-             label 'maven' 
+             label 'nodejs' 
          }
     } 
 
@@ -13,8 +13,7 @@ pipeline {
                 echo 'Waiting 5 minutes for deployment to complete prior starting smoke testing'
                 echo 'New pull request changes'
                 sleep 10 // seconds
-                sh 'node -version'
-                sh 'npm run install'
+                sh 'node --version'
                
                 
             }

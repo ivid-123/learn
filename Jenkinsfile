@@ -14,7 +14,7 @@ pipeline {
                 // sh 'npm --version'
                 // echo 'ng verion'
                 // sh 'npm install @angular/cli@7.3.9'
-                echo 'hellow world'
+                echo 'hellow worldfffffffffff'
             }
         }
         stage('Test') {

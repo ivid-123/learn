@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
            
             steps {
+                echo 'tstigngg'
                 sh 'node --version'
                 sh 'npm --version'
                 echo 'ng verion'

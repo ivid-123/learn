@@ -1,11 +1,15 @@
 pipeline {
-    agent any
+    agent {
+         node { 
+             label 'nodejs' 
+
+         }
+    } 
 
     stages {
         stage('Build') {
            
             steps {
-                echo 'tstignggdddddffffffdd'
                 sh 'node --version'
                 sh 'npm --version'
                 echo 'ng verion'
@@ -15,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing111..'
+                echo 'Testing..'
             }
         }
         stage('Deploy') {

@@ -14,6 +14,7 @@ pipeline {
                 echo 'New pull request changes'
                 sleep 10 // seconds
                 sh 'node --version'
+                sh 'npm --version'
                
                 
             }
